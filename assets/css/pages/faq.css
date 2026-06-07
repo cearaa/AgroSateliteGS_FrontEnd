@@ -1,0 +1,62 @@
+/* ============================================================
+   FAQ — AgroSatélite
+   ============================================================ */
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Item do accordion */
+.accordion-item {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+/* Botão do cabeçalho — usa <button> para semântica e acessibilidade */
+.accordion-header {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 1.1rem 1.4rem;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--green-dark);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background var(--transition);
+}
+
+.accordion-header:hover {
+    background: var(--green-pale);
+}
+
+.accordion-header .chevron {
+    font-size: 1.1rem;
+    transition: transform var(--transition);
+    flex-shrink: 0;
+}
+
+.accordion-item.open .accordion-header .chevron {
+    transform: rotate(180deg);
+}
+
+/* Conteúdo expandível */
+.accordion-content {
+    display: none;
+    padding: 0 1.4rem 1.2rem;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    border-top: 1px solid var(--gray);
+}
+
+.accordion-item.open .accordion-content {
+    display: block;
+}
