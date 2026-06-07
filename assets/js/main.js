@@ -1,11 +1,6 @@
-/* ============================================================
-   MAIN.JS — AgroSatélite
-   Interatividade global: menu hambúrguer, back-to-top,
-   accordion FAQ, validação do formulário de contato,
-   e lógica do dashboard de consulta agrícola.
-   ============================================================ */
+/* main.js — AgroSatélite */
 
-/* ---- 1. MENU HAMBÚRGUER ---- */
+/* MENU HAMBÚRGUER */
 const menuToggle = document.getElementById('menuToggle');
 const navMenu = document.getElementById('navMenu');
 
@@ -24,7 +19,7 @@ if (menuToggle && navMenu) {
     });
 }
 
-/* ---- 2. BOTÃO VOLTAR AO TOPO ---- */
+/* BOTÃO VOLTAR AO TOPO */
 const backTop = document.getElementById('backToTop');
 
 if (backTop) {
@@ -37,7 +32,7 @@ if (backTop) {
     });
 }
 
-/* ---- 3. ACCORDION FAQ ---- */
+/* ACCORDION FAQ */
 document.querySelectorAll('.accordion-header').forEach(btn => {
     btn.addEventListener('click', () => {
         const item = btn.closest('.accordion-item');
@@ -57,7 +52,7 @@ document.querySelectorAll('.accordion-header').forEach(btn => {
     });
 });
 
-/* ---- 4. VALIDAÇÃO — FORMULÁRIO DE CONTATO ---- */
+/* VALIDAÇÃO — FORMULÁRIO DE CONTATO */
 const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
@@ -101,7 +96,7 @@ if (contactForm) {
     });
 }
 
-/* ---- 5. DASHBOARD — CONSULTA AGRÍCOLA ---- */
+/* DASHBOARD — CONSULTA AGRÍCOLA */
 const consultaForm = document.getElementById('consultaForm');
 
 if (consultaForm) {
