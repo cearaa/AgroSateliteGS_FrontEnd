@@ -12,7 +12,6 @@
 
 <body>
 
-    <!-- ==================== HEADER ==================== -->
     <header class="header">
         <div class="container nav-container">
             <p class="logo-text">🌱 AgroSatélite</p>
@@ -33,13 +32,11 @@
         </div>
     </header>
 
-    <!-- ==================== CONTEÚDO PRINCIPAL ==================== -->
     <main>
 
         <section class="section container" aria-labelledby="dashboard-titulo">
             <h1 id="dashboard-titulo">Dashboard — Consulta de Colheita</h1>
 
-            <!-- Formulário de consulta -->
             <div class="consulta-panel mt-1">
                 <h2>Dados da Lavoura</h2>
                 <p class="mb-2 text-intro">
@@ -121,8 +118,6 @@
                 </form>
             </div>
 
-            <!-- ==================== ÁREA DE RESULTADO ==================== -->
-            <!-- Visibilidade controlada pelo JS via classe .visible -->
             <div class="resultado-area" id="resultadoArea" aria-live="polite" aria-atomic="true">
 
                 <div class="resultado-header">
@@ -132,7 +127,6 @@
 
                 <p id="statusMsg" class="status-descricao"></p>
 
-                <!-- Métricas -->
                 <div class="metricas-grid">
                     <div class="metrica-card">
                         <p class="metrica-label">Cultura</p>
@@ -168,7 +162,6 @@
                     </div>
                 </div>
 
-                <!-- Barra NDVI — largura via CSS custom property (sem CSS inline) -->
                 <div class="card ndvi-bar-wrapper">
                     <div class="ndvi-label">
                         <span>NDVI: <strong id="ndviValorDisplay">—</strong></span>
@@ -180,13 +173,11 @@
                 </div>
 
             </div>
-            <!-- /resultado-area -->
 
         </section>
 
     </main>
 
-    <!-- ==================== FOOTER ==================== -->
     <footer class="footer">
         <div class="container footer-inner">
             <p>&copy; 2026 AgroSatélite — Tecnologia Espacial para o Agronegócio Brasileiro.</p>
