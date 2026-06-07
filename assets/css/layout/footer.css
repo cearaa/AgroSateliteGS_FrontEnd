@@ -1,0 +1,47 @@
+/* ============================================================
+   FOOTER — AgroSatélite
+   ============================================================ */
+
+.footer {
+    background: var(--green-dark);
+    color: var(--white);
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.footer-links a {
+    color: var(--white);
+    font-size: 0.9rem;
+    opacity: 0.85;
+    transition: opacity var(--transition);
+}
+
+.footer-links a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+}
