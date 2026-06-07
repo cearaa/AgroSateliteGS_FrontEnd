@@ -1,0 +1,59 @@
+/* ============================================================
+   CARDS — AgroSatélite */
+
+.card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+}
+
+.card h3 {
+    color: var(--green-dark);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.card p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* Card com ícone no topo */
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Stat box — valores numéricos em destaque */
+.stat-box {
+    background: var(--green-pale);
+    border-left: 4px solid var(--green);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.5rem;
+    text-align: center;
+}
+
+.stat-box h3 {
+    font-size: 2rem;
+    color: var(--green-dark);
+}
+
+.stat-box p {
+    color: var(--gray-mid);
+    font-size: 0.9rem;
+}
+
+/* Stats row */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
