@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dashboard de consulta — informe os dados da sua lavoura e descubra se está pronta para colheita.">
+    <title>AgroSatélite — Dashboard de Consulta</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/js/main.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="header">
+        <div class="container nav-container">
+            <p class="logo-text">🌱 AgroSatélite</p>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+                ☰
+            </button>
+
+            <nav class="nav" id="navMenu" aria-label="Menu principal">
+                <a href="index.html" aria-label="Ir para a Página Inicial">Home</a>
+                <a href="integrantes.html" aria-label="Ver Integrantes da equipe">Integrantes</a>
+                <a href="sobre.html" aria-label="Saiba mais Sobre o projeto">Sobre</a>
+                <a href="faq.html" aria-label="Perguntas Frequentes">FAQ</a>
+                <a href="contato.html" aria-label="Entrar em Contato">Contato</a>
+                <a href="dashboard.html" aria-label="Acessar o Dashboard de consulta" aria-current="page">Dashboard</a>
+                <a href="monitoramento.html" aria-label="Ver Monitoramento Satelital">Monitoramento</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==================== CONTEÚDO PRINCIPAL ==================== -->
+    <main>
+
+        <section class="section container" aria-labelledby="dashboard-titulo">
+            <h1 id="dashboard-titulo">Dashboard — Consulta de Colheita</h1>
+
+            <!-- Formulário de consulta -->
+            <div class="consulta-panel mt-1">
+                <h2>Dados da Lavoura</h2>
+                <p class="mb-2" style="color:#555; font-size:0.95rem;">
+                    Preencha os campos abaixo para receber o diagnóstico da sua plantação.
+                </p>
+
+                <form id="consultaForm" novalidate>
+
+                    <div class="consulta-grid">
+
+                        <div class="form-group">
+                            <label for="nomeFazenda">Nome da Fazenda</label>
+                            <input type="text" id="nomeFazenda" name="nomeFazenda"
+                                   placeholder="Ex: Fazenda Santa Fé" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tipoCultura">Tipo de Cultura</label>
+                            <select id="tipoCultura" name="tipoCultura" required>
+                                <option value="">Selecione a cultura…</option>
+                                <option value="soja">Soja</option>
+                                <option value="milho">Milho</option>
+                                <option value="trigo">Trigo</option>
+                                <option value="arroz">Arroz</option>
+                                <option value="feijao">Feijão</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="diasPlantio">Dias desde o Plantio</label>
+                            <input type="number" id="diasPlantio" name="diasPlantio"
+                                   min="1" max="365" placeholder="Ex: 105" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="umidade">Umidade do Solo (%)</label>
+                            <input type="number" id="umidade" name="umidade"
+                                   min="0" max="100" step="0.1" placeholder="Ex: 65.5" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="temperatura">Temperatura (°C)</label>
+                            <input type="number" id="temperatura" name="temperatura"
+                                   min="-10" max="50" step="0.1" placeholder="Ex: 24.0" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ndvi">Índice NDVI (0 a 1)</label>
+                            <input type="number" id="ndvi" name="ndvi"
+                                   min="0" max="1" step="0.01" placeholder="Ex: 0.72" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="irrigada">Plantação Irrigada?</label>
+                            <select id="irrigada" name="irrigada">
+                                <option value="nao">Não (sequeiro)</option>
+                                <option value="sim">Sim</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="producao">Produção Estimada (sacas/ha)</label>
+                            <input type="number" id="producao" name="producao"
+                                   min="0" step="0.1" placeholder="Ex: 58.0">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="precoSaca">Preço da Saca (R$)</label>
+                            <input type="number" id="precoSaca" name="precoSaca"
+                                   min="0" step="0.01" placeholder="Ex: 135.50">
+                        </div>
+
+                    </div>
+
+                    <button type="submit" class="btn mt-1" aria-label="Analisar dados da lavoura">
+                        🔍 Analisar Lavoura
+                    </button>
+
+                </form>
+            </div>
+
+            <!-- ==================== ÁREA DE RESULTADO ==================== -->
+           
+            </div>
+            <!-- /resultado-area -->
+
+        </section>
+
+    </main>
+
+    
