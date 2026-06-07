@@ -60,3 +60,43 @@ document.querySelectorAll('.accordion-header').forEach(btn => {
 /* ---- 4. VALIDAÇÃO — FORMULÁRIO DE CONTATO ---- */
 const contactForm = document.getElementById('contactForm');
 
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const nome    = document.getElementById('nome');
+        const email   = document.getElementById('email');
+        const assunto = document.getElementById('assunto');
+        const mensagem = document.getElementById('mensagem');
+        const feedback = document.getElementById('feedbackContato');
+        let valid = true;
+
+        /* Limpa erros anteriores */
+        [nome, email, assunto, mensagem].forEach(field => {
+            const errEl = field.parentElement.querySelector('.field-error');
+            if (errEl) errEl.textContent = '';
+            field.style.borderColor = '';
+        });
+
+        const showError = (field, msg) => {
+            const errEl = field.parentElement.querySelector('.field-error');
+            if (errEl) errEl.textContent = msg;
+            field.style.borderColor = 'var(--danger)';
+            valid = false;
+        };
+
+        if (!nome.value.trim()) showError(nome, 'Informe o seu nome.');
+        if (!email.value.includes('@') || !email.value.includes('.')) showError(email, 'Informe um e-mail válido.');
+        if (assunto && !assunto.value.trim()) showError(assunto, 'Informe o assunto.');
+        if (!mensagem.value.trim()) showError(mensagem, 'Escreva uma mensagem.');
+
+        if (!valid) return;
+
+        feedback.className = 'feedback-msg success';
+        feedback.textContent = '✓ Mensagem enviada com sucesso! Entraremos em contato em breve.';
+        contactForm.reset();
+
+        /* Remove feedback após 5 s */
+        setTimeout(() => { feedback.textContent = ''; feedback.className = ''; }, 5000);
+    });
+}
