@@ -1,9 +1,4 @@
-/* ============================================================
-   MAIN.CSS — AgroSatélite
-   Ponto de entrada único; importa todos os módulos CSS.
-   ATENÇÃO: todos os caminhos usam "css" (minúsculo) para
-   compatibilidade em servidores Linux/web (case-sensitive).
-   ============================================================ */
+/* Importações CSS */
 
 @import url('./base/reset.css');
 @import url('./base/variables.css');
@@ -20,7 +15,7 @@
 @import url('./pages/dashboard.css');
 @import url('./pages/monitoramento.css');
 
-/* ---- Body base ---- */
+/* Body base */
 body {
     background-color: var(--gray-light);
     min-height: 100vh;

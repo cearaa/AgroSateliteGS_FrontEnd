@@ -1,6 +1,4 @@
-/* ============================================================
-   MONITORAMENTO SATELITAL — AgroSatélite
-   ============================================================ */
+/* Página monitoramento */
 
 .mapa-placeholder {
     background: linear-gradient(135deg, #1a5c2a 0%, #2e7d32 50%, #4caf50 100%);
@@ -96,3 +94,11 @@
         height: 220px;
     }
 }
+
+/* Legenda NDVI — cores fixas via CSS, sem inline */
+.ndvi-c1 { background: #d32f2f; }
+.ndvi-c2 { background: #f57c00; }
+.ndvi-c3 { background: #fbc02d; }
+.ndvi-c4 { background: #aed581; }
+.ndvi-c5 { background: #66bb6a; }
+.ndvi-c6 { background: #2e7d32; }
