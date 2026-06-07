@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça o projeto AgroSatélite, nossa proposta e as tecnologias utilizadas.">
+    <title>AgroSatélite — Sobre o Projeto</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/js/main.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="header">
+        <div class="container nav-container">
+            <p class="logo-text">🌱 AgroSatélite</p>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+                ☰
+            </button>
+
+            <nav class="nav" id="navMenu" aria-label="Menu principal">
+                <a href="index.html" aria-label="Ir para a Página Inicial">Home</a>
+                <a href="integrantes.html" aria-label="Ver Integrantes da equipe">Integrantes</a>
+                <a href="sobre.html" aria-label="Saiba mais Sobre o projeto" aria-current="page">Sobre</a>
+                <a href="faq.html" aria-label="Perguntas Frequentes">FAQ</a>
+                <a href="contato.html" aria-label="Entrar em Contato">Contato</a>
+                <a href="dashboard.html" aria-label="Acessar o Dashboard de consulta">Dashboard</a>
+                <a href="monitoramento.html" aria-label="Ver Monitoramento Satelital">Monitoramento</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==================== CONTEÚDO PRINCIPAL ==================== -->
+    <main>
+
+        <section class="section container" aria-labelledby="sobre-titulo">
+            <h1 id="sobre-titulo">Sobre o AgroSatélite</h1>
+
+            <!-- Introdução -->
+            <div class="sobre-intro mt-1">
+                <p>
+                    O <strong>AgroSatélite</strong> é uma plataforma de monitoramento agrícola inteligente que conecta a
+                    exploração espacial com a realidade do campo brasileiro. Utilizando dados satelitais (imagens NDVI,
+                    temperatura, umidade), informações de plantio e cotações de mercado, o sistema determina com precisão
+                    se uma lavoura está pronta para a colheita — ou se deve aguardar mais alguns dias.
+                </p>
+            </div>
+
+            <!-- Cards de conteúdo -->
+            <div class="grid mt-2">
+
+                <div class="card">
+                    <h3>🌍 O Problema que Resolvemos</h3>
+                    <p>
+                        Agricultores perdem bilhões por ano por colher cedo demais ou tarde demais. A análise visual
+                        isolada é subjetiva e imprecisa. O AgroSatélite elimina essa incerteza ao cruzar dados
+                        objetivos de múltiplas fontes em tempo real.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🛰️ Como Funciona</h3>
+                    <p>
+                        O agricultor insere os dados da fazenda (cultura, dias desde o plantio, umidade, NDVI,
+                        temperatura, irrigação e produção estimada). O sistema analisa esses parâmetros contra
+                        limiares específicos de cada cultura e emite um diagnóstico claro.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🌱 Culturas Suportadas</h3>
+                    <ul class="tech-list">
+                        <li>Soja — ciclo ~100 dias, NDVI mín. 0,60</li>
+                        <li>Milho — ciclo ~110 dias, NDVI mín. 0,55</li>
+                        <li>Trigo — ciclo ~90 dias, NDVI mín. 0,50</li>
+                        <li>Arroz — ciclo ~120 dias, NDVI mín. 0,58</li>
+                        <li>Feijão — ciclo ~80 dias, NDVI mín. 0,50</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>💻 Tecnologias Utilizadas</h3>
+                    <ul class="tech-list">
+                        <li><strong>HTML5</strong> — estrutura semântica das páginas</li>
+                        <li><strong>CSS3</strong> — layout responsivo e identidade visual</li>
+                        <li><strong>JavaScript</strong> — lógica de análise e interatividade</li>
+                        <li><strong>Git / GitHub</strong> — versionamento e colaboração</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+</html>
