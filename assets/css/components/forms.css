@@ -1,6 +1,4 @@
-/* ============================================================
-   FORMULÁRIOS — AgroSatélite
-   ============================================================ */
+/* Formulários */
 
 .form-group {
     margin-bottom: 1.2rem;
@@ -62,6 +60,7 @@
     border: 1px solid var(--danger);
 }
 
+/* Mensagem de erro inline por campo */
 .field-error {
     font-size: 0.82rem;
     color: var(--danger);

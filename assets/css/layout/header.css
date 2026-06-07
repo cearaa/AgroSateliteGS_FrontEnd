@@ -1,6 +1,4 @@
-/* ============================================================
-   HEADER / NAV — AgroSatélite
-   ============================================================ */
+/* Header e navegação */
 
 .header {
     background: var(--green-dark);
@@ -55,7 +53,7 @@
     line-height: 1;
 }
 
-/* ---- Responsividade ---- */
+/* Responsividade */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
