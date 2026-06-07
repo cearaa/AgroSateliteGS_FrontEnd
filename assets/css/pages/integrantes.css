@@ -1,0 +1,79 @@
+/* ============================================================
+   INTEGRANTES — AgroSatélite
+   ============================================================ */
+
+.integrantes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.8rem;
+}
+
+.integrante-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow var(--transition), transform var(--transition);
+    border-top: 5px solid var(--green);
+}
+
+.integrante-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+}
+
+.integrante-card img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1rem;
+    border: 3px solid var(--green-light);
+}
+
+.integrante-card h3 {
+    color: var(--green-dark);
+    font-size: 1.05rem;
+    margin-bottom: 0.3rem;
+}
+
+.integrante-card p {
+    color: var(--gray-mid);
+    font-size: 0.88rem;
+    margin-bottom: 0.2rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background: var(--green-pale);
+    border-radius: 50%;
+    transition: background var(--transition);
+}
+
+.social-links a:hover {
+    background: var(--green-light);
+}
+
+.social-links img {
+    width: 22px;
+    height: 22px;
+    margin: 0;
+}
+
+@media (max-width: 480px) {
+    .integrantes-grid {
+        grid-template-columns: 1fr;
+    }
+}
