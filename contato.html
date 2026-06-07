@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com a equipe do AgroSatélite.">
+    <title>AgroSatélite — Contato</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/js/main.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header cnlass="header">
+        <div class="container nav-container">
+            <p class="logo-text">🌱 AgroSatélite</p>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+                ☰
+            </button>
+
+            <nav class="nav" id="navMenu" aria-label="Menu principal">
+                <a href="index.html" aria-label="Ir para a Página Inicial">Home</a>
+                <a href="integrantes.html" aria-label="Ver Integrantes da equipe">Integrantes</a>
+                <a href="sobre.html" aria-label="Saiba mais Sobre o projeto">Sobre</a>
+                <a href="faq.html" aria-label="Perguntas Frequentes">FAQ</a>
+                <a href="contato.html" aria-label="Entrar em Contato" aria-current="page">Contato</a>
+                <a href="dashboard.html" aria-label="Acessar o Dashboard de consulta">Dashboard</a>
+                <a href="monitoramento.html" aria-label="Ver Monitoramento Satelital">Monitoramento</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==================== CONTEÚDO PRINCIPAL ==================== -->
+    <main>
+
+        <section class="section container" aria-labelledby="contato-titulo">
+            <h1 id="contato-titulo">Contato</h1>
+
+            <div class="contato-wrapper mt-2">
+
+                <!-- Informações de contato -->
+                <div class="contato-info">
+                    <h2>Fale com a equipe</h2>
+                    <p>
+                        Tem dúvidas sobre a plataforma, quer sugerir uma nova cultura ou precisa de suporte técnico?
+                        Preencha o formulário ao lado e retornaremos em até 48 horas.
+                    </p>
+
+                    <div class="info-item">
+                        <span aria-hidden="true">📧</span>
+                        <span>contato@agrosatelite.com.br</span>
+                    </div>
+                    <div class="info-item">
+                        <span aria-hidden="true">📍</span>
+                        <span>São Paulo, SP — Brasil</span>
+                    </div>
+                    <div class="info-item">
+                        <span aria-hidden="true">🕐</span>
+                        <span>Atendimento: seg–sex, 8h–18h</span>
+                    </div>
+                </div>
+
+                <!-- Formulário de contato -->
+                <div class="contato-form">
+                    <h3>Envie sua mensagem</h3>
+
+                    <form id="contactForm" novalidate>
+
+                        <div class="form-group">
+                            <label for="nome">Nome completo *</label>
+                            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                            <span class="field-error" role="alert" aria-live="polite"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                            <span class="field-error" role="alert" aria-live="polite"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="assunto">Assunto *</label>
+                            <input type="text" id="assunto" name="assunto" placeholder="Ex: Dúvida sobre NDVI" required>
+                            <span class="field-error" role="alert" aria-live="polite"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem *</label>
+                            <textarea id="mensagem" name="mensagem" placeholder="Descreva sua dúvida ou sugestão..." required></textarea>
+                            <span class="field-error" role="alert" aria-live="polite"></span>
+                        </div>
+
+                        <button type="submit" class="btn" aria-label="Enviar mensagem de contato">
+                            Enviar Mensagem
+                        </button>
+
+                        <div id="feedbackContato" role="alert" aria-live="polite"></div>
+
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+</html>
