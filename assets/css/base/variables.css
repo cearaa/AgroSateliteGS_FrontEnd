@@ -1,7 +1,4 @@
-/* ============================================================
-   VARIÁVEIS GLOBAIS — AgroSatélite
-   Paleta de cores, tipografia e utilidades
-   ============================================================ */
+/* Variáveis globais e utilitários */
 
 :root {
     /* Paleta principal */
@@ -43,7 +40,7 @@
     --transition: 0.3s ease;
 }
 
-/* ---- Utilitários de espaçamento ---- */
+/* Utilitários de espaçamento */
 .mt-1 { margin-top: 1rem; }
 .mt-2 { margin-top: 2rem; }
 .mb-1 { margin-bottom: 1rem; }
@@ -51,16 +48,33 @@
 .gap-1 { gap: 1rem; }
 .gap-2 { gap: 2rem; }
 
-/* ---- Container central ---- */
+/* Container central */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* ---- Grid genérico ---- */
+/* Grid genérico */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
 }
+
+/* Classes utilitárias de texto */
+.text-muted   { color: #555; }
+.text-small   { font-size: 0.9rem; }
+.text-small-p { font-size: 0.9rem; color: #555; }
+.text-intro   { font-size: 0.95rem; color: #555; }
+
+/* Overflow responsivo */
+.overflow-x   { overflow-x: auto; }
+
+/* Links de fonte (fontes externas no monitoramento) */
+.fonte-titulo { color: var(--green-dark); margin-bottom: 0.3rem; }
+.fonte-desc   { font-size: 0.9rem; color: #555; }
+.fonte-link   { color: var(--sky); }
+
+/* Parágrafo de status do resultado */
+.status-descricao { color: #555; margin-bottom: 1.5rem; }

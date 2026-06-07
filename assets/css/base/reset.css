@@ -1,7 +1,4 @@
-/* ============================================================
-   RESET — AgroSatélite
-   Remove estilos padrão dos navegadores para consistência
-   ============================================================ */
+/* Reset de estilos */
 
 *, *::before, *::after {
     box-sizing: border-box;
