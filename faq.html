@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="header">
+        <div class="container nav-container">
+            <p class="logo-text">🌱 AgroSatélite</p>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+                ☰
+            </button>
+
+            <nav class="nav" id="navMenu" aria-label="Menu principal">
+                <a href="index.html" aria-label="Ir para a Página Inicial">Home</a>
+                <a href="integrantes.html" aria-label="Ver Integrantes da equipe">Integrantes</a>
+                <a href="sobre.html" aria-label="Saiba mais Sobre o projeto">Sobre</a>
+                <a href="faq.html" aria-label="Perguntas Frequentes" aria-current="page">FAQ</a>
+                <a href="contato.html" aria-label="Entrar em Contato">Contato</a>
+                <a href="dashboard.html" aria-label="Acessar o Dashboard de consulta">Dashboard</a>
+                <a href="monitoramento.html" aria-label="Ver Monitoramento Satelital">Monitoramento</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==================== CONTEÚDO PRINCIPAL ==================== -->
+    <main>
+
+        <section class="section container" aria-labelledby="faq-titulo">
+            <h1 id="faq-titulo">Perguntas Frequentes</h1>
+            <p class="mb-2" style="color: #555;">Tire as principais dúvidas sobre o AgroSatélite e como usar a plataforma.</p>
+
+            <!-- Accordion: usa <button> em cada cabeçalho para semântica e acessibilidade correta -->
+            <div class="faq-list" role="list">
+
+                <div class="accordion-item" role="listitem">
+                    <button class="accordion-header" aria-expanded="false" aria-controls="faq-1">
+                        O que é o AgroSatélite?
+                        <span class="chevron" aria-hidden="true">▼</span>
+                    </button>
+                    <div class="accordion-content" id="faq-1" role="region">
+                        O AgroSatélite é um sistema web de monitoramento agrícola inteligente que integra dados satelitais,
+                        climáticos e de cultivo para recomendar o momento ideal de colheita. O agricultor informa os dados
+                        de sua fazenda e recebe um diagnóstico baseado em NDVI, temperatura, umidade e histórico da cultura.
+                    </div>
+                </div>
+
+                <div class="accordion-item" role="listitem">
+                    <button class="accordion-header" aria-expanded="false" aria-controls="faq-2">
+                        O que é NDVI e por que é importante?
+                        <span class="chevron" aria-hidden="true">▼</span>
+                    </button>
+                    <div class="accordion-content" id="faq-2" role="region">
+                        O <strong>NDVI (Normalized Difference Vegetation Index)</strong> é um índice obtido por imagens
+                        de satélite que mede a saúde e densidade da vegetação. Varia de -1 a 1: valores acima de 0,5
+                        indicam vegetação densa e saudável. Quando o NDVI começa a cair, significa que a planta está
+                        maturando — o momento ideal para colheita.
+                    </div>
+                </div>
+
+                <div class="accordion-item" role="listitem">
+                    <button class="accordion-header" aria-expanded="false" aria-controls="faq-3">
+                        Quais culturas são suportadas?
+                        <span class="chevron" aria-hidden="true">▼</span>
+                    </button>
+                    <div class="accordion-content" id="faq-3" role="region">
+                        Atualmente o sistema suporta <strong>soja, milho, trigo, arroz e feijão</strong>. Cada cultura
+                        possui parâmetros próprios de ciclo mínimo, NDVI ideal e umidade recomendada, que são usados
+                        na análise. Mais culturas serão adicionadas em versões futuras.
+                    </div>
+                </div>
+
+                <div class="accordion-item" role="listitem">
+                    <button class="accordion-header" aria-expanded="false" aria-controls="faq-4">
+                        Como a irrigação influencia a análise?
+                        <span class="chevron" aria-hidden="true">▼</span>
+                    </button>
+                    <div class="accordion-content" id="faq-4" role="region">
+                        Plantações irrigadas tendem a ter umidade do solo mais controlada, o que pode antecipar levemente
+                        a maturação. O sistema registra essa informação para ajustar a interpretação dos dados e fornecer
+                        recomendações mais precisas comparado a plantações de sequeiro.
+                    </div>
+                </div>
+
+                <div class="accordion-item" role="listitem">
+                    <button class="accordion-header" aria-expanded="false" aria-controls="faq-5">
+                        O preço da saca influencia na recomendação de colheita?
+                        <span class="chevron" aria-hidden="true">▼</span>
+                    </button>
+                    <div class="accordion-content" id="faq-5" role="region">
+                        Diretamente, não — a recomendação de colheita é baseada em critérios agronômicos. Porém, o preço
+                        da saca é exibido no painel para que o agricultor possa estimar o retorno financeiro total com
+                        base na produção informada, apoiando a tomada de decisão comercial.
+                    </div>
+                </div>
+
+                <div class="accordion-item" role="listitem">
+                    <button class="accordion-header" aria-expanded="false" aria-controls="faq-6">
+                        Como interpretar os três status do diagnóstico?
+                        <span class="chevron" aria-hidden="true">▼</span>
+                    </button>
+                    <div class="accordion-content" id="faq-6" role="region">
+                        <strong>✓ Pronto para Colheita:</strong> todos os indicadores (dias, NDVI, umidade, temperatura)
+                        atingiram os valores ideais. <br><br>
+                        <strong>⏳ Aguardar:</strong> a maioria dos indicadores está dentro do esperado, mas alguns ainda
+                        precisam de mais tempo. <br><br>
+                        <strong>⚠ Atenção:</strong> múltiplas condições adversas detectadas — recomenda-se verificação
+                        agronômica urgente.
+                    </div>
+                </div>
+
+                <div class="accordion-item" role="listitem">
+                    <button class="accordion-header" aria-expanded="false" aria-controls="faq-7">
+                        De onde vêm os dados satelitais?
+                        <span class="chevron" aria-hidden="true">▼</span>
+                    </button>
+                    <div class="accordion-content" id="faq-7" role="region">
+                        A inspiração do projeto utiliza dados abertos da <strong>NASA</strong> (nasa.gov), da
+                        <strong>ESA — Agência Espacial Europeia</strong> (esa.int) e do
+                        <strong>Space Charter</strong> (disasterscharter.org), que provê dados satelitais para
+                        monitoramento e resposta a desastres.
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
