@@ -190,13 +190,13 @@ Garantindo compatibilidade para:
 # 🌐 Repositório
 
 <p align="center">
-  <a href="https://github.com/SEU_USUARIO/agrosatelite" target="_blank">
+  <a href="https://github.com/cearaa/AgroSateliteGS_FrontEnd" target="_blank">
     <img src="https://img.shields.io/badge/Acessar%20Repositório-2e7d32?style=for-the-badge&logo=github&logoColor=white"/>
   </a>
 </p>
 
 <p align="center">
-👉 https://github.com/SEU_USUARIO/agrosatelite
+👉 https://github.com/cearaa/AgroSateliteGS_FrontEnd
 </p>
 
 ---
@@ -206,7 +206,7 @@ Garantindo compatibilidade para:
 Clone o repositório:
 
 ```bash
-git clone https://github.com/SEU_USUARIO/agrosatelite
+git clone https://github.com/cearaa/AgroSateliteGS_FrontEnd
 ```
 
 Entre na pasta:
