@@ -1,0 +1,98 @@
+/* ============================================================
+   MONITORAMENTO SATELITAL — AgroSatélite
+   ============================================================ */
+
+.mapa-placeholder {
+    background: linear-gradient(135deg, #1a5c2a 0%, #2e7d32 50%, #4caf50 100%);
+    border-radius: var(--radius-lg);
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+}
+
+.mapa-placeholder::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.mapa-placeholder p {
+    position: relative;
+    z-index: 1;
+    opacity: 0.9;
+}
+
+/* Painel de dados satelitais */
+.satelital-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.satelital-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 1.3rem;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    border-top: 4px solid var(--sky);
+}
+
+.satelital-card .sat-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.satelital-card .sat-valor {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--sky);
+}
+
+.satelital-card .sat-label {
+    font-size: 0.82rem;
+    color: var(--gray-mid);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Escala de cores NDVI visual */
+.ndvi-legend {
+    display: flex;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    height: 24px;
+    margin-bottom: 0.5rem;
+}
+
+.ndvi-legend span {
+    flex: 1;
+}
+
+.ndvi-legend-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.78rem;
+    color: var(--gray-mid);
+}
+
+@media (max-width: 480px) {
+    .satelital-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .mapa-placeholder {
+        height: 220px;
+    }
+}
