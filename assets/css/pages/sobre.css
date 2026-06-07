@@ -1,0 +1,63 @@
+/* ============================================================
+   SOBRE — AgroSatélite
+   ============================================================ */
+
+.sobre-intro {
+    background: var(--green-pale);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-left: 5px solid var(--green);
+}
+
+.sobre-intro p {
+    font-size: 1.05rem;
+    color: #333;
+    line-height: 1.8;
+}
+
+.tech-list {
+    margin-top: 0.8rem;
+    padding-left: 1.2rem;
+}
+
+.tech-list li {
+    list-style: disc;
+    color: #444;
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+}
+
+.sdg-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.sdg-item {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 1rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    border-top: 4px solid var(--green);
+}
+
+.sdg-item .sdg-num {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--green);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 40px;
+    margin-bottom: 0.5rem;
+}
+
+.sdg-item p {
+    font-size: 0.88rem;
+    color: #444;
+}
