@@ -38,7 +38,7 @@
 
         <section class="section container" aria-labelledby="mon-titulo">
             <h1 id="mon-titulo">Monitoramento Satelital</h1>
-            <p class="mb-2" style="color:#555;">
+            <p class="mb-2 text-muted">
                 Visualize os dados orbitais coletados por satélites para as principais regiões agrícolas do Brasil.
                 As informações incluem cobertura de nuvens, temperatura de superfície, precipitação e índice NDVI.
             </p>
@@ -98,16 +98,16 @@
             <!-- Legenda NDVI -->
             <section class="card mt-2" aria-labelledby="ndvi-leg-titulo">
                 <h3 id="ndvi-leg-titulo">Escala de Cores NDVI</h3>
-                <p style="color:#555; font-size:0.9rem; margin-bottom:0.8rem;">
+                <p class="text-small-p mb-1">
                     O NDVI varia de -1 (sem vegetação / água) a 1 (vegetação muito densa e saudável).
                 </p>
                 <div class="ndvi-legend" role="img" aria-label="Barra de gradiente de cores do NDVI">
-                    <span style="background:#d32f2f;"></span>
-                    <span style="background:#f57c00;"></span>
-                    <span style="background:#fbc02d;"></span>
-                    <span style="background:#aed581;"></span>
-                    <span style="background:#66bb6a;"></span>
-                    <span style="background:#2e7d32;"></span>
+                    <span class="ndvi-c1"></span>
+                    <span class="ndvi-c2"></span>
+                    <span class="ndvi-c3"></span>
+                    <span class="ndvi-c4"></span>
+                    <span class="ndvi-c5"></span>
+                    <span class="ndvi-c6"></span>
                 </div>
                 <div class="ndvi-legend-labels">
                     <span>-1 (Água / Solo)</span>
@@ -119,7 +119,7 @@
             <!-- Tabela de histórico simulado -->
             <section class="card mt-2" aria-labelledby="hist-titulo">
                 <h3 id="hist-titulo">Histórico de Leituras — Últimos 7 dias</h3>
-                <div style="overflow-x: auto;">
+                <div class="overflow-x mt-1">
                     <table class="tabela-historico mt-1">
                         <thead>
                             <tr>
@@ -163,24 +163,24 @@
                 <h3 id="fontes-titulo">Fontes dos Dados Satelitais</h3>
                 <div class="grid mt-1">
                     <div>
-                        <h4 style="color:var(--green-dark); margin-bottom:0.3rem;">NASA</h4>
-                        <p style="font-size:0.9rem; color:#555;">
+                        <h4 class="fonte-titulo">NASA</h4>
+                        <p class="fonte-desc">
                             Missões Artemis, dados abertos de satélites, imagens e pesquisas espaciais atualizadas.
-                            <a href="https://nasa.gov" target="_blank" rel="noopener noreferrer" style="color:var(--sky);">nasa.gov</a>
+                            <a href="https://nasa.gov" target="_blank" rel="noopener noreferrer" class="fonte-link">nasa.gov</a>
                         </p>
                     </div>
                     <div>
-                        <h4 style="color:var(--green-dark); margin-bottom:0.3rem;">ESA</h4>
-                        <p style="font-size:0.9rem; color:#555;">
+                        <h4 class="fonte-titulo">ESA</h4>
+                        <p class="fonte-desc">
                             Agência Espacial Europeia — programas de observação da Terra e missões científicas.
-                            <a href="https://esa.int" target="_blank" rel="noopener noreferrer" style="color:var(--sky);">esa.int</a>
+                            <a href="https://esa.int" target="_blank" rel="noopener noreferrer" class="fonte-link">esa.int</a>
                         </p>
                     </div>
                     <div>
-                        <h4 style="color:var(--green-dark); margin-bottom:0.3rem;">Space Charter</h4>
-                        <p style="font-size:0.9rem; color:#555;">
+                        <h4 class="fonte-titulo">Space Charter</h4>
+                        <p class="fonte-desc">
                             Dados de satélite para resposta a desastres — monitoramento, análise e tomada de decisão.
-                            <a href="https://disasterscharter.org" target="_blank" rel="noopener noreferrer" style="color:var(--sky);">disasterscharter.org</a>
+                            <a href="https://disasterscharter.org" target="_blank" rel="noopener noreferrer" class="fonte-link">disasterscharter.org</a>
                         </p>
                     </div>
                 </div>
