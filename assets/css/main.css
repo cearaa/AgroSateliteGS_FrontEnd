@@ -1,0 +1,9 @@
+/* ============================================================
+   MAIN.CSS — AgroSatélite
+   Ponto de entrada único; importa todos os módulos CSS.
+   ATENÇÃO: todos os caminhos usam "css" (minúsculo) para
+   compatibilidade em servidores Linux/web (case-sensitive).
+   ============================================================ */
+
+@import url('./base/reset.css');
+
