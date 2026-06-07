@@ -1,6 +1,4 @@
-/* ============================================================
-   BOTÕES — AgroSatélite
-   ============================================================ */
+/* Botões e back-to-top */
 
 .btn {
     display: inline-block;
@@ -47,7 +45,7 @@
     background: #8b0000;
 }
 
-/* ---- Botão voltar ao topo ---- */
+/* Botão voltar ao topo */
 .back-top {
     position: fixed;
     bottom: 24px;
