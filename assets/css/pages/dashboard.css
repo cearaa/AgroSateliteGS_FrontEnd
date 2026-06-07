@@ -1,0 +1,191 @@
+/* ============================================================
+   DASHBOARD / CONSULTA — AgroSatélite
+   ============================================================ */
+
+/* Painel de formulário de consulta */
+.consulta-panel {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 2.5rem;
+}
+
+.consulta-panel h2 {
+    border: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    color: var(--green-dark);
+}
+
+.consulta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem;
+}
+
+/* Área de resultado */
+.resultado-area {
+    display: none;
+}
+
+.resultado-area.visible {
+    display: block;
+}
+
+.resultado-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.resultado-header h2 {
+    font-size: 1.4rem;
+    color: var(--green-dark);
+    border: none;
+    padding: 0;
+}
+
+/* Badge de status */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1.1rem;
+    border-radius: 99px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-badge.pronto {
+    background: #e8f5e9;
+    color: var(--success);
+    border: 1.5px solid var(--success);
+}
+
+.status-badge.aguardar {
+    background: #fff8e1;
+    color: var(--warning);
+    border: 1.5px solid var(--warning);
+}
+
+.status-badge.atencao {
+    background: #ffebee;
+    color: var(--danger);
+    border: 1.5px solid var(--danger);
+}
+
+/* Cards de métricas */
+.metricas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.metrica-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 1.3rem;
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--green);
+}
+
+.metrica-card .metrica-label {
+    font-size: 0.8rem;
+    color: var(--gray-mid);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.3rem;
+}
+
+.metrica-card .metrica-valor {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--green-dark);
+}
+
+.metrica-card .metrica-unidade {
+    font-size: 0.85rem;
+    color: var(--gray-mid);
+}
+
+/* Barra NDVI — usa CSS puro, SEM inline */
+.ndvi-bar-wrapper {
+    margin-top: 1.5rem;
+}
+
+.ndvi-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 0.4rem;
+}
+
+.ndvi-track {
+    height: 14px;
+    background: var(--gray);
+    border-radius: 99px;
+    overflow: hidden;
+}
+
+.ndvi-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #f44336, #ffeb3b, #4caf50);
+    border-radius: 99px;
+    /* Largura definida via CSS custom property —
+       NÃO é inline; é definida pelo JS no elemento pai */
+    width: var(--ndvi-pct, 0%);
+    transition: width 0.6s ease;
+}
+
+/* Tabela de histórico */
+.tabela-historico {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.tabela-historico thead th {
+    background: var(--green-dark);
+    color: var(--white);
+    padding: 0.8rem 1rem;
+    text-align: left;
+}
+
+.tabela-historico tbody tr:nth-child(even) {
+    background: var(--green-pale);
+}
+
+.tabela-historico tbody td {
+    padding: 0.7rem 1rem;
+    border-bottom: 1px solid var(--gray);
+    color: #444;
+}
+
+/* Preço das sacas */
+.preco-saca {
+    font-weight: 700;
+    color: var(--green-dark);
+}
+
+@media (max-width: 480px) {
+    .consulta-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .metricas-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .tabela-historico {
+        font-size: 0.8rem;
+    }
+}
