@@ -100,3 +100,95 @@ if (contactForm) {
         setTimeout(() => { feedback.textContent = ''; feedback.className = ''; }, 5000);
     });
 }
+
+/* ---- 5. DASHBOARD — CONSULTA AGRÍCOLA ---- */
+const consultaForm = document.getElementById('consultaForm');
+
+if (consultaForm) {
+    consultaForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        processarConsulta();
+    });
+}
+
+function processarConsulta() {
+    /* Coleta os valores do formulário */
+    const fazenda       = document.getElementById('nomeFazenda')?.value || '—';
+    const cultura       = document.getElementById('tipoCultura')?.value || '—';
+    const diasPlantio   = parseInt(document.getElementById('diasPlantio')?.value) || 0;
+    const umidade       = parseFloat(document.getElementById('umidade')?.value) || 0;
+    const temperatura   = parseFloat(document.getElementById('temperatura')?.value) || 0;
+    const ndvi          = parseFloat(document.getElementById('ndvi')?.value) || 0;
+    const irrigada      = document.getElementById('irrigada')?.value === 'sim';
+    const producao      = parseFloat(document.getElementById('producao')?.value) || 0;
+    const precoSaca     = parseFloat(document.getElementById('precoSaca')?.value) || 0;
+
+    /* Limites mínimos por cultura (dias, NDVI mín, umidade ideal) */
+    const limites = {
+        soja:   { diasMin: 100, ndviMin: 0.6, umidadeMin: 60 },
+        milho:  { diasMin: 110, ndviMin: 0.55, umidadeMin: 55 },
+        trigo:  { diasMin: 90,  ndviMin: 0.5,  umidadeMin: 50 },
+        arroz:  { diasMin: 120, ndviMin: 0.58, umidadeMin: 70 },
+        feijao: { diasMin: 80,  ndviMin: 0.5,  umidadeMin: 55 },
+    };
+
+    const limite = limites[cultura] || { diasMin: 90, ndviMin: 0.5, umidadeMin: 55 };
+
+    /* Decisão de prontidão */
+    const diasOk    = diasPlantio >= limite.diasMin;
+    const ndviOk    = ndvi >= limite.ndviMin;
+    const umidadeOk = umidade >= limite.umidadeMin;
+    const tempOk    = temperatura >= 15 && temperatura <= 35;
+
+    let status, statusClass, statusMsg;
+
+    const score = [diasOk, ndviOk, umidadeOk, tempOk].filter(Boolean).length;
+
+    if (score === 4) {
+        status      = '✓ PRONTO PARA COLHEITA';
+        statusClass = 'pronto';
+        statusMsg   = 'Todos os indicadores apontam condições ideais. Você pode iniciar a colheita.';
+    } else if (score >= 2) {
+        status      = '⏳ AGUARDAR MAIS UM POUCO';
+        statusClass = 'aguardar';
+        statusMsg   = `${4 - score} indicador(es) ainda não atingiram os valores ideais. Acompanhe nos próximos dias.`;
+    } else {
+        status      = '⚠ ATENÇÃO — CONDIÇÕES ADVERSAS';
+        statusClass = 'atencao';
+        statusMsg   = 'A plantação apresenta múltiplas condições desfavoráveis. Verifique irrigação, nutrição e pragas.';
+    }
+
+    /* Preenche a área de resultado */
+    document.getElementById('resultFazenda').textContent   = fazenda;
+    document.getElementById('resultCultura').textContent   = cultura.charAt(0).toUpperCase() + cultura.slice(1);
+    document.getElementById('resultDias').textContent      = diasPlantio;
+    document.getElementById('resultUmidade').textContent   = umidade;
+    document.getElementById('resultTemp').textContent      = temperatura;
+    document.getElementById('resultNdvi').textContent      = ndvi.toFixed(2);
+    document.getElementById('resultIrrigada').textContent  = irrigada ? 'Sim' : 'Não';
+    document.getElementById('resultProducao').textContent  = producao.toFixed(1);
+    document.getElementById('resultPreco').textContent     = precoSaca.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+    /* Status badge */
+    const badge = document.getElementById('statusBadge');
+    badge.textContent  = status;
+    badge.className    = `status-badge ${statusClass}`;
+
+    document.getElementById('statusMsg').textContent = statusMsg;
+
+    /* Barra NDVI — usa CSS custom property, evitando style inline */
+    const ndviPct = Math.min(Math.max(ndvi * 100, 0), 100);
+    const ndviFill = document.getElementById('ndviFill');
+    if (ndviFill) {
+        ndviFill.style.setProperty('--ndvi-pct', `${ndviPct}%`);
+    }
+    const ndviValorEl = document.getElementById('ndviValorDisplay');
+    if (ndviValorEl) ndviValorEl.textContent = ndvi.toFixed(2);
+
+    /* Mostra a área de resultado */
+    const resultArea = document.getElementById('resultadoArea');
+    if (resultArea) {
+        resultArea.classList.add('visible');
+        resultArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
