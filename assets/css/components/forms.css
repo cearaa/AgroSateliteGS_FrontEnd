@@ -66,3 +66,6 @@
     color: var(--danger);
     margin-top: 0.2rem;
 }
+.input-error {
+    border-color: var(--danger) !important;
+}

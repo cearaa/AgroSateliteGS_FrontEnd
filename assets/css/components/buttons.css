@@ -76,3 +76,8 @@
 .back-top:hover {
     background: var(--green-dark);
 }
+
+.btn.loading {
+    opacity: 0.7;
+    cursor: wait;
+}

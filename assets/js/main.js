@@ -115,16 +115,13 @@ if (consultaForm) {
 
         ];
         let formValido = true;
-
         regrasValidacao.forEach(regra => {
             const campo = document.getElementById(regra.id);
             const spanErro = campo.parentElement.querySelector('.field-error');
-
-            campo.style.borderColor = '';
+            campo.classList.remove('input-error');
             if (spanErro) spanErro.textContent = '';
-
             if (campo.value.trim() === '') {
-                campo.style.borderColor = 'var(--danger)';
+                campo.classList.add('input-error');
                 if (spanErro) spanErro.textContent = regra.mensagem;
                 formValido = false;
             }
@@ -132,8 +129,17 @@ if (consultaForm) {
         if (!formValido) {
             return;
         }
-
-        processarConsulta();
+        const btnSubmit = consultaForm.querySelector('button[type="submit"]');
+        const textoOriginal = btnSubmit.innerHTML;
+        btnSubmit.disabled = true;
+        btnSubmit.classList.add('loading');
+        btnSubmit.innerHTML = 'Estamos conectando aos satélites, aguarde';
+        setTimeout(() => {
+            processarConsulta();
+            btnSubmit.disabled = false;
+            btnSubmit.classList.remove('loading');
+            btnSubmit.innerHTML = textoOriginal;
+        }, 1500);
     });
 }
 function processarConsulta() {
