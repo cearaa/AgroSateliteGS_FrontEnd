@@ -33,10 +33,15 @@
 /* Stat box — valores numéricos em destaque */
 .stat-box {
     background: var(--green-pale);
-    border-left: 4px solid var(--green);
     border-radius: var(--radius);
+    border: 1px solid var(--green-light);
     padding: 1.2rem 1.5rem;
     text-align: center;
+    transition: transform var(--transition);
+}
+
+.stat-box:hover {
+    transform: scale(1.02);
 }
 
 .stat-box h3 {
