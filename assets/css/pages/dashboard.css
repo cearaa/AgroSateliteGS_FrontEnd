@@ -206,7 +206,7 @@
     font-size: 1rem;
 }
 /* Título da seção */
-h1 {
+.dashboard-titulo {
     border-left: 5px solid var(--green);
     padding-left: 0.8rem;
     margin-bottom: 0.5rem;
