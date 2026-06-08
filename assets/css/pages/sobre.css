@@ -40,6 +40,11 @@
     text-align: center;
     box-shadow: var(--shadow-sm);
     border-top: 4px solid var(--green);
+    transition: transform 0.3s ease;
+}
+
+.sdg-item:hover {
+    transform: scale(1.02);
 }
 
 .sdg-item .sdg-num {
