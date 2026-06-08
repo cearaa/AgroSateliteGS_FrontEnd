@@ -118,3 +118,9 @@ h1 {
     padding-left: 0.8rem;
     margin-bottom: 0.5rem;
 }
+/* Hover nos cards satelitais */
+.satelital-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
