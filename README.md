@@ -157,6 +157,22 @@ O projeto utiliza uma identidade visual inspirada no agronegócio, sustentabilid
 
 ---
 
+# 🖼️ Screenshots
+
+> Adicione prints reais das telas após finalizar o projeto visualmente. Sugestão de capturas:
+
+| Página | O que mostrar |
+|---|---|
+| `index.html` | Hero verde com botão de CTA e grid de funcionalidades |
+| `dashboard.html` | Formulário preenchido + resultado com badge de status e barra NDVI |
+| `monitoramento.html` | Cards de dados orbitais e tabela histórica |
+| `faq.html` | Accordion aberto mostrando pergunta e resposta |
+| `contato.html` | Formulário com validação de erro ativa |
+| `integrantes.html` | Grid com fotos e links sociais |
+| Mobile | Menu hambúrguer aberto em tela pequena |
+
+---
+
 # 📱 Responsividade
 
 O projeto foi desenvolvido utilizando:
