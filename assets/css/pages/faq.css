@@ -52,16 +52,24 @@
 
 /* Conteúdo expandível */
 .accordion-content {
-    display: none;
-    padding: 0 1.4rem 1.2rem;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0 16px;
     color: #555;
     font-size: 0.95rem;
     line-height: 1.7;
     border-top: 1px solid var(--gray);
+    transition:
+        max-height 0.35s ease,
+        opacity 0.25s ease,
+        padding 0.35s ease;
+    max-height: 0;
 }
 
 .accordion-item.open .accordion-content {
-    display: block;
+    max-height: 500px;
+    opacity: 1;
+    padding: 16px;
 }
 /* Título da seção */
 h1 {
