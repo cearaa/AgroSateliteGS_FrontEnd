@@ -185,7 +185,9 @@ function processarConsulta() {
     let status, statusClass, statusMsg;
 
     const score = [diasOk, ndviOk, umidadeOk, tempOk].filter(Boolean).length;
-
+    const motivosPendentes = [];
+    if (!umidadeOk) motivosPendentes.push(`A umidade (${umidade}%) está abaixo do necessário (${limite.umidadeMin}%).`);
+    if (!tempOk) motivosPendentes.push(`A temperatura (${temperatura}°C) está fora da faixa segura (15°C - 35°C).`);
     if (score === 4) {
         status      = '✓ PRONTO PARA COLHEITA';
         statusClass = 'pronto';
