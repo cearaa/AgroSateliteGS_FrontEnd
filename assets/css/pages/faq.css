@@ -15,6 +15,15 @@
     box-shadow: var(--shadow-sm);
     overflow: hidden;
 }
+h1 {
+    border-left: 5px solid var(--green);
+    padding-left: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.faq-list {
+    margin-top: 2rem;
+}
 
 /* Botão do cabeçalho — usa <button> para semântica e acessibilidade */
 .accordion-header {
