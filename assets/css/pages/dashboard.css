@@ -187,3 +187,18 @@
         font-size: 0.8rem;
     }
 }
+
+@media (max-width: 768px) {
+    .consulta-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .metricas-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .resultado-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
