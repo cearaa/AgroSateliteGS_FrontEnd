@@ -14,7 +14,7 @@
 
     <header class="header">
         <div class="container nav-container">
-            <p class="logo-text">🌱 AgroSatélite</p>
+            <p class="logo-text">&#127793 AgroSatélite</p>
 
             <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu de navegação" aria-expanded="false">
                 ☰
@@ -43,7 +43,7 @@
                 <div class="accordion-item" role="listitem">
                     <button class="accordion-header" aria-expanded="false" aria-controls="faq-1">
                         O que é o AgroSatélite?
-                        <span class="chevron" aria-hidden="true">▼</span>
+                        <span class="chevron" aria-hidden="true">&#9660</span>
                     </button>
                     <div class="accordion-content" id="faq-1" role="region">
                         O AgroSatélite é um sistema web de monitoramento agrícola inteligente que integra dados satelitais,
@@ -55,7 +55,7 @@
                 <div class="accordion-item" role="listitem">
                     <button class="accordion-header" aria-expanded="false" aria-controls="faq-2">
                         O que é NDVI e por que é importante?
-                        <span class="chevron" aria-hidden="true">▼</span>
+                        <span class="chevron" aria-hidden="true">&#9660</span>
                     </button>
                     <div class="accordion-content" id="faq-2" role="region">
                         O <strong>NDVI (Normalized Difference Vegetation Index)</strong> é um índice obtido por imagens
@@ -64,11 +64,30 @@
                         maturando — o momento ideal para colheita.
                     </div>
                 </div>
+                
+                <div class="accordion-item" role="listitem">
+                    <button class="accordion-header" aria-expanded="false" aria-controls="faq-ndvi-escala">
+                        Como interpretar a escala e os valores do NDVI?
+                        <span class="chevron" aria-hidden="true">&#9660;</span>
+                    </button>
+                    <div class="accordion-content" id="faq-ndvi-escala" role="region">
+                        <p>
+                            As plantas saudáveis possuem muita clorofila e estruturas celulares ativas. Por isso, elas absorvem a luz vermelha (usada na fotossíntese) e refletem fortemente a luz infravermelha. O NDVI cruza essas duas informações e gera um índice que varia de <strong>-1 a 1</strong>:
+                        </p>
+        
+                        <ul class="faq-ndvi-list" style="margin-top: 10px; padding-left: 20px; list-style-type: disc;">
+                            <li><strong>-1 a 0:</strong> Superfícies sem vegetação, como água, nuvens ou áreas urbanas.</li>
+                            <li><strong>0 a 0,33:</strong> Solo exposto, rochas ou vegetação severamente escassa ou morta.</li>
+                            <li><strong>0,33 a 0,6:</strong> Vegetação em estágios iniciais ou sob algum nível de estresse hídrico/nutricional.</li>
+                            <li><strong>0,6 a 1:</strong> Vegetação densa e altamente saudável (como florestas ou   lavouras em pleno desenvolvimento).</li>
+                        </ul>
+                    </div>
+                </div>
 
                 <div class="accordion-item" role="listitem">
                     <button class="accordion-header" aria-expanded="false" aria-controls="faq-3">
                         Quais culturas são suportadas?
-                        <span class="chevron" aria-hidden="true">▼</span>
+                        <span class="chevron" aria-hidden="true">&#9660</span>
                     </button>
                     <div class="accordion-content" id="faq-3" role="region">
                         Atualmente o sistema suporta <strong>soja, milho, trigo, arroz e feijão</strong>. Cada cultura
@@ -80,7 +99,7 @@
                 <div class="accordion-item" role="listitem">
                     <button class="accordion-header" aria-expanded="false" aria-controls="faq-4">
                         Como a irrigação influencia a análise?
-                        <span class="chevron" aria-hidden="true">▼</span>
+                        <span class="chevron" aria-hidden="true">&#9660</span>
                     </button>
                     <div class="accordion-content" id="faq-4" role="region">
                         Plantações irrigadas tendem a ter umidade do solo mais controlada, o que pode antecipar levemente
@@ -92,7 +111,7 @@
                 <div class="accordion-item" role="listitem">
                     <button class="accordion-header" aria-expanded="false" aria-controls="faq-5">
                         O preço da saca influencia na recomendação de colheita?
-                        <span class="chevron" aria-hidden="true">▼</span>
+                        <span class="chevron" aria-hidden="true">&#9660</span>
                     </button>
                     <div class="accordion-content" id="faq-5" role="region">
                         Diretamente, não — a recomendação de colheita é baseada em critérios agronômicos. Porém, o preço
@@ -104,14 +123,14 @@
                 <div class="accordion-item" role="listitem">
                     <button class="accordion-header" aria-expanded="false" aria-controls="faq-6">
                         Como interpretar os três status do diagnóstico?
-                        <span class="chevron" aria-hidden="true">▼</span>
+                        <span class="chevron" aria-hidden="true">&#9660</span>
                     </button>
                     <div class="accordion-content" id="faq-6" role="region">
                         <strong>✓ Pronto para Colheita:</strong> todos os indicadores (dias, NDVI, umidade, temperatura)
                         atingiram os valores ideais. <br><br>
                         <strong>⏳ Aguardar:</strong> a maioria dos indicadores está dentro do esperado, mas alguns ainda
                         precisam de mais tempo. <br><br>
-                        <strong>⚠ Atenção:</strong> múltiplas condições adversas detectadas — recomenda-se verificação
+                        <strong>&#9888 Atenção:</strong> múltiplas condições adversas detectadas — recomenda-se verificação
                         agronômica urgente.
                     </div>
                 </div>
@@ -119,7 +138,7 @@
                 <div class="accordion-item" role="listitem">
                     <button class="accordion-header" aria-expanded="false" aria-controls="faq-7">
                         De onde vêm os dados satelitais?
-                        <span class="chevron" aria-hidden="true">▼</span>
+                        <span class="chevron" aria-hidden="true">&#9660</span>
                     </button>
                     <div class="accordion-content" id="faq-7" role="region">
                         A inspiração do projeto utiliza dados abertos da <strong>NASA</strong> (nasa.gov), da
@@ -139,7 +158,7 @@
             <p>&copy; 2026 AgroSatélite — Tecnologia Espacial para o Agronegócio Brasileiro.</p>
             <nav class="footer-links" aria-label="Links do rodapé">
                 <a href="sobre.html">Sobre</a>
-                <a href="faq.html">FAQ</a>
+                <a href="index.html">Home</a>
                 <a href="contato.html">Contato</a>
             </nav>
         </div>
