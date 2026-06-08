@@ -188,19 +188,22 @@ function processarConsulta() {
     if (!umidadeOk) motivosPendentes.push(`A umidade (${umidade}%) está abaixo do necessário (${limite.umidadeMin}%).`);
     if (!tempOk) motivosPendentes.push(`A temperatura (${temperatura}°C) está fora da faixa segura (15°C - 35°C).`);
     if (score === 4) {
-        status      = '✓ PRONTO PARA COLHEITA';
+        status= '✓ PRONTO PARA COLHEITA';
         statusClass = 'pronto';
-        statusMsg   = 'Todos os indicadores apontam condições ideais. Você pode iniciar a colheita.';
+        statusMsg= 'Todos os indicadores apontam condições ideais. Você pode iniciar a colheita.';
     } else if (score >= 2) {
-        status      = '⏳ AGUARDAR MAIS UM POUCO';
-        statusClass = 'aguardar';
-        statusMsg   = `Acompanhe nos próximos dias. Pontos de atenção: ${motivosPendentes.join(' ')}`;
-    } else {
-        status      = '⚠ ATENÇÃO — CONDIÇÕES ADVERSAS';
-        statusClass = 'atencao';
-        statusMsg   = `Risco na lavoura! Fatores críticos: ${motivosPendentes.join(' ')}`;
-    }
-
+        status = "⏳ AGUARDAR MAIS UM POUCO";
+        statusClass = "aguardar";
+        const diasFaltantes = limite.diasMin - diasPlantio;
+        const motivosExibir = diasOk ? motivosPendentes : motivosPendentes.slice(1);
+        statusMsg = `${diasOk ? "" : `Faltam aproximadamente ${diasFaltantes} dias para o mínimo de plantio. `}Acompanhe nos próximos dias. Pontos de atenção: ${motivosExibir.join(" ")}`;
+} else {
+    status = '⚠ ATENÇÃO — CONDIÇÕES ADVERSAS';
+    statusClass = 'atencao';
+    const diasFaltantes2 = limite.diasMin - diasPlantio;
+    const motivosExibir2 = diasOk ? motivosPendentes : motivosPendentes.slice(1);
+    statusMsg = `${diasOk ? "" : `Faltam aproximadamente ${diasFaltantes2} dias para o mínimo de plantio. `}Risco na lavoura! Fatores críticos: ${motivosExibir2.join(" ")}`;
+}
     /* Preenche a área de resultado */
     document.getElementById('resultFazenda').textContent   = fazenda;
     document.getElementById('resultCultura').textContent   = cultura.charAt(0).toUpperCase() + cultura.slice(1);
