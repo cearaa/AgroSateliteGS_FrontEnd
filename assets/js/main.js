@@ -110,8 +110,6 @@ if (consultaForm) {
             { id: "umidade", mensagem: 'Por favor, digite a umidade do local.'},
             { id: "temperatura", mensagem: 'Por favor, digite a temperatura do local.'},
             { id: "ndvi", mensagem: 'Por favor, digite a NDVI.'},
-            {id: "producao", mensagem:'Marque o tamanho estimado da produção.'},
-            { id: "precoSaca", mensagem: 'Por favor, digite o valor da saca.'}
 
         ];
         let formValido = true;
