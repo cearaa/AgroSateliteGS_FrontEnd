@@ -110,7 +110,6 @@ if (consultaForm) {
             { id: "umidade", mensagem: 'Digite a umidade do local'},
             { id: "temperatura", mensagem: 'Digite a temperatura do local'},
             { id: "ndvi", mensagem: 'Digite a ndvi'},
-            { id: "irrigada", mensagem: 'Marque se a plantação foi irrigada'},
             {id: "producao", mensagem:'Marque o tamanho estimado da produção'},
             { id: "precoSaca", mensagem: 'Digite o valor da saca'}
 
