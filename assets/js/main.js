@@ -129,7 +129,6 @@ if (consultaForm) {
         const campoNdvi = document.getElementById('ndvi');
         if (campoNdvi) {
             const valorNdvi = parseFloat(campoNdvi.value);
-            // Só faz a validação se o campo não estiver vazio
             if (campoNdvi.value.trim() !== '' && (valorNdvi < 0 || valorNdvi > 1)) {
                 campoNdvi.classList.add('input-error');
                 const spanErro = campoNdvi.parentElement.querySelector('.field-error');
@@ -214,6 +213,10 @@ function processarConsulta() {
     document.getElementById('resultIrrigada').textContent  = irrigada ? 'Sim' : 'Não';
     document.getElementById('resultProducao').textContent  = producao.toFixed(1);
     document.getElementById('resultPreco').textContent     = precoSaca.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    const receita = producao * precoSaca;
+    document.getElementById('resultReceita').textContent = receita > 0
+    ? receita.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+    : '—';
 
     /* Status badge */
     const badge = document.getElementById('statusBadge');
