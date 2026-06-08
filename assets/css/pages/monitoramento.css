@@ -102,3 +102,13 @@
 .ndvi-c4 { background: #aed581; }
 .ndvi-c5 { background: #66bb6a; }
 .ndvi-c6 { background: #2e7d32; }
+
+@media (max-width: 768px) {
+    .satelital-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .tabela-historico {
+        font-size: 0.82rem;
+    }
+}
