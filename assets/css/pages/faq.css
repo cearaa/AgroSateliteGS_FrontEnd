@@ -15,12 +15,6 @@
     box-shadow: var(--shadow-sm);
     overflow: hidden;
 }
-h1 {
-    border-left: 5px solid var(--green);
-    padding-left: 0.8rem;
-    margin-bottom: 0.5rem;
-}
-
 .faq-list {
     margin-top: 2rem;
 }
@@ -68,4 +62,10 @@ h1 {
 
 .accordion-item.open .accordion-content {
     display: block;
+}
+/* Título da seção */
+h1 {
+    border-left: 5px solid var(--green);
+    padding-left: 0.8rem;
+    margin-bottom: 0.5rem;
 }

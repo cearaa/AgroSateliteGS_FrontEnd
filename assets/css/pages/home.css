@@ -131,3 +131,9 @@
         font-size: 1.4rem;
     }
 }
+/* Título da seção */
+h1 {
+    border-left: 5px solid var(--green);
+    padding-left: 0.8rem;
+    margin-bottom: 0.5rem;
+}
