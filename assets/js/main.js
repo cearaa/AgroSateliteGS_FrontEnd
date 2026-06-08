@@ -102,10 +102,24 @@ const consultaForm = document.getElementById('consultaForm');
 if (consultaForm) {
     consultaForm.addEventListener('submit', (e) => {
         e.preventDefault();
+
+        const regrasValidacao = [
+            { id: 'nomeFazenda', mensagem: 'É necessário o nome da fazenda.' },
+            { id: 'tipoCultura', mensagem: 'Por favor, selecione uma cultura.' },
+            { id: "diasPlantio", mensagem:'Digite quantos dias desde o plantio'},
+            { id: "umidade", mensagem: 'Digite a umidade do local'},
+            { id: "temperatura", mensagem: 'Digite a temperatura do local'},
+            { id: "ndvi", mensagem: 'Digite a ndvi'},
+            { id: "irrigada", mensagem: 'Marque se a plantação foi irrigada'},
+            {id: "producao", mensagem:'Marque o tamanho estimado da produção'},
+            { id: "precoSaca", mensagem: 'Digite o valor da saca'}
+
+        ];
+
+
         processarConsulta();
     });
 }
-
 function processarConsulta() {
     /* Coleta os valores do formulário */
     const fazenda       = document.getElementById('nomeFazenda')?.value || '—';
