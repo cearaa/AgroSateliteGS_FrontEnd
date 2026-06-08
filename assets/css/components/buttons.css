@@ -2,7 +2,7 @@
 
 .btn {
     display: inline-block;
-    background: var(--green);
+    background: linear-gradient(135deg, var(--green-light) 0%, var(--green-dark) 90%);
     color: var(--white);
     padding: 0.75rem 1.6rem;
     border: none;
