@@ -17,7 +17,7 @@
 
 /* Body base */
 body {
-    background-color: var(--gray-light);
+    background: linear-gradient(135deg, #e8f5e9, #e3f2fd);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
