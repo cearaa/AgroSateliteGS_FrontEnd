@@ -186,6 +186,8 @@ function processarConsulta() {
 
     const score = [diasOk, ndviOk, umidadeOk, tempOk].filter(Boolean).length;
     const motivosPendentes = [];
+    if (!diasOk) motivosPendentes.push(`Faltam dias de plantio (Mínimo: ${limite.diasMin}).`);
+    if (!ndviOk) motivosPendentes.push(`O NDVI atual (${ndvi}) está abaixo do ideal (${limite.ndviMin}).`);
     if (!umidadeOk) motivosPendentes.push(`A umidade (${umidade}%) está abaixo do necessário (${limite.umidadeMin}%).`);
     if (!tempOk) motivosPendentes.push(`A temperatura (${temperatura}°C) está fora da faixa segura (15°C - 35°C).`);
     if (score === 4) {
@@ -195,11 +197,11 @@ function processarConsulta() {
     } else if (score >= 2) {
         status      = '⏳ AGUARDAR MAIS UM POUCO';
         statusClass = 'aguardar';
-        statusMsg   = `${4 - score} indicador(es) ainda não atingiram os valores ideais. Acompanhe nos próximos dias.`;
+        statusMsg   = `Acompanhe nos próximos dias. Pontos de atenção: ${motivosPendentes.join(' ')}`;
     } else {
         status      = '⚠ ATENÇÃO — CONDIÇÕES ADVERSAS';
         statusClass = 'atencao';
-        statusMsg   = 'A plantação apresenta múltiplas condições desfavoráveis. Verifique irrigação, nutrição e pragas.';
+        statusMsg   = `Risco na lavoura! Fatores críticos: ${motivosPendentes.join(' ')}`;
     }
 
     /* Preenche a área de resultado */
