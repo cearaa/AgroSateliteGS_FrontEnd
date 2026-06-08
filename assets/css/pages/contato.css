@@ -51,7 +51,7 @@
     }
 }
 /* Título da seção */
-.contato-titulo {
+#contato-titulo {
     border-left: 5px solid var(--green);
     padding-left: 0.8rem;
     margin-bottom: 0.5rem;
