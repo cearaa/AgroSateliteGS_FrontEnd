@@ -166,8 +166,6 @@ A paleta foi construída com base nas cores da natureza, sustentabilidade e tecn
 
 ## 🖼️ Screenshots
 
-> Alguém bota os prints aqui por favor
-
 | Página | Preview |
 |---|---|
 | Home | <img width="1080" height="1920" alt="Screen Shot 2026-06-08 at 20 19 13" src="https://github.com/user-attachments/assets/423f42cf-0750-4bd4-b9c4-fc29afc548ba" /> |
