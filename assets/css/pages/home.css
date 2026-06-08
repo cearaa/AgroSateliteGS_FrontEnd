@@ -47,12 +47,13 @@
     border-radius: var(--radius);
     padding: 1.8rem 1.5rem;
     text-align: center;
-    box-shadow: var(--shadow-sm);
-    transition: box-shadow var(--transition), transform var(--transition);
     border-top: 4px solid var(--green-light);
+    border: 1px solid var(--green-light);
+    transition: box-shadow var(--transition), transform var(--transition);
 }
 
 .feature-card:hover {
+    border: 0;
     box-shadow: var(--shadow-md);
     transform: translateY(-4px);
 }
@@ -132,7 +133,7 @@
     }
 }
 /* Título da seção */
-.hero-titulo {
+#hero-titulo {
     padding-left: 0.8rem;
     margin-bottom: 0.5rem;
 }
