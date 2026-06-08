@@ -51,6 +51,7 @@
                             <label for="nomeFazenda">Nome da Fazenda</label>
                             <input type="text" id="nomeFazenda" name="nomeFazenda"
                                    placeholder="Ex: Fazenda Santa Fé" required>
+                                   <span class="field-error" role="alert" aria-live="polite"></span>
                         </div>
 
                         <div class="form-group">
@@ -63,30 +64,35 @@
                                 <option value="arroz">Arroz</option>
                                 <option value="feijao">Feijão</option>
                             </select>
+                            <span class="field-error" role="alert" aria-live="polite"></span>
                         </div>
 
                         <div class="form-group">
                             <label for="diasPlantio">Dias desde o Plantio</label>
                             <input type="number" id="diasPlantio" name="diasPlantio"
                                    min="1" max="365" placeholder="Ex: 105" required>
+                                   <span class="field-error" role="alert" aria-live="polite"></span>
                         </div>
 
                         <div class="form-group">
                             <label for="umidade">Umidade do Solo (%)</label>
                             <input type="number" id="umidade" name="umidade"
                                    min="0" max="100" step="0.1" placeholder="Ex: 65.5" required>
+                                   <span class="field-error" role="alert" aria-live="polite"></span>
                         </div>
 
                         <div class="form-group">
                             <label for="temperatura">Temperatura (°C)</label>
                             <input type="number" id="temperatura" name="temperatura"
                                    min="-10" max="50" step="0.1" placeholder="Ex: 24.0" required>
+                                   <span class="field-error" role="alert" aria-live="polite"></span>
                         </div>
 
                         <div class="form-group">
                             <label for="ndvi">Índice NDVI (0 a 1)</label>
                             <input type="number" id="ndvi" name="ndvi"
                                    min="0" max="1" step="0.01" placeholder="Ex: 0.72" required>
+                                   <span class="field-error" role="alert" aria-live="polite"></span>
                         </div>
 
                         <div class="form-group">
