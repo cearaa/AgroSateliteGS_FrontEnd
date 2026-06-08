@@ -46,11 +46,6 @@
     text-align: center;
     border-top: 4px solid var(--sky);
 }
-h1 {
-    border-left: 5px solid var(--green);
-    padding-left: 0.8rem;
-    margin-bottom: 0.5rem;
-}
 
 .satelital-card .sat-icon {
     font-size: 2rem;
@@ -116,4 +111,10 @@ h1 {
     .tabela-historico {
         font-size: 0.82rem;
     }
+}
+/* Título da seção */
+h1 {
+    border-left: 5px solid var(--green);
+    padding-left: 0.8rem;
+    margin-bottom: 0.5rem;
 }
