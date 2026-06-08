@@ -171,6 +171,7 @@ A paleta foi construída com base nas cores da natureza, sustentabilidade e tecn
 | Home | <img width="1080" height="1920" alt="Screen Shot 2026-06-08 at 20 19 13" src="https://github.com/user-attachments/assets/423f42cf-0750-4bd4-b9c4-fc29afc548ba" /> |
 | Dashboard | <img width="1920" height="1080" alt="Screen Shot 2026-06-08 at 20 21 38" src="https://github.com/user-attachments/assets/4869d392-27b4-4e75-b291-c86b94d76d8e" /> |
 | Monitoramento | <img width="1080" height="1920" alt="Screen Shot 2026-06-08 at 20 22 32" src="https://github.com/user-attachments/assets/0cd6c4a1-f257-4b3f-8780-2d0e9195ac11" /> |
+| Sobre | <img width="1920" height="1180" alt="Screen Shot 2026-06-08 at 20 34 34" src="https://github.com/user-attachments/assets/908509ae-9575-4c99-8c2e-13d28707323a" /> |
 | FAQ | <img width="1920" height="1080" alt="Screen Shot 2026-06-08 at 20 23 03" src="https://github.com/user-attachments/assets/f602b5c3-383c-4c12-9e6d-853a5b0b1ccc" /> |
 | Contato | <img width="1920" height="1080" alt="Screen Shot 2026-06-08 at 20 23 36" src="https://github.com/user-attachments/assets/2363e85c-ecb9-4ff6-ad95-46cfc3d9fcb7" /> |
 | Integrantes | <img width="1920" height="1080" alt="Screen Shot 2026-06-08 at 20 24 05" src="https://github.com/user-attachments/assets/196230aa-ca8e-4910-b5c7-15103d77794f" /> |
