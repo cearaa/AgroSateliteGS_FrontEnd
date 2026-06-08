@@ -3,7 +3,7 @@
 .mapa-placeholder {
     background: linear-gradient(135deg, #1a5c2a 0%, #2e7d32 50%, #4caf50 100%);
     border-radius: var(--radius-lg);
-    height: 320px;
+    height: 220px;
     display: flex;
     align-items: center;
     justify-content: center;
