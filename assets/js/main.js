@@ -115,7 +115,24 @@ if (consultaForm) {
             { id: "precoSaca", mensagem: 'Digite o valor da saca'}
 
         ];
+        let formValido = true;
 
+        regrasValidacao.forEach(regra => {
+            const campo = document.getElementById(regra.id);
+            const spanErro = campo.parentElement.querySelector('.field-error');
+
+            campo.style.borderColor = '';
+            if (spanErro) spanErro.textContent = '';
+
+            if (campo.value.trim() === '') {
+                campo.style.borderColor = 'var(--danger)';
+                if (spanErro) spanErro.textContent = regra.mensagem;
+                formValido = false;
+            }
+        });
+        if (!formValido) {
+            return;
+        }
 
         processarConsulta();
     });
