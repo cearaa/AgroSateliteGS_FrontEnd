@@ -126,6 +126,17 @@ if (consultaForm) {
                 formValido = false;
             }
         });
+        const campoNdvi = document.getElementById('ndvi');
+        if (campoNdvi) {
+            const valorNdvi = parseFloat(campoNdvi.value);
+            // Só faz a validação se o campo não estiver vazio
+            if (campoNdvi.value.trim() !== '' && (valorNdvi < 0 || valorNdvi > 1)) {
+                campoNdvi.classList.add('input-error');
+                const spanErro = campoNdvi.parentElement.querySelector('.field-error');
+                if (spanErro) spanErro.textContent = 'O valor do NDVI deve ser entre 0 e 1.';
+                formValido = false;
+            }
+        }
         if (!formValido) {
             return;
         }
