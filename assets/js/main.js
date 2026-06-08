@@ -106,12 +106,12 @@ if (consultaForm) {
         const regrasValidacao = [
             { id: 'nomeFazenda', mensagem: 'É necessário o nome da fazenda.' },
             { id: 'tipoCultura', mensagem: 'Por favor, selecione uma cultura.' },
-            { id: "diasPlantio", mensagem:'Digite quantos dias desde o plantio'},
-            { id: "umidade", mensagem: 'Digite a umidade do local'},
-            { id: "temperatura", mensagem: 'Digite a temperatura do local'},
-            { id: "ndvi", mensagem: 'Digite a ndvi'},
-            {id: "producao", mensagem:'Marque o tamanho estimado da produção'},
-            { id: "precoSaca", mensagem: 'Digite o valor da saca'}
+            { id: "diasPlantio", mensagem:'Por favor, digite quantos dias desde o plantio.'},
+            { id: "umidade", mensagem: 'Por favor, digite a umidade do local.'},
+            { id: "temperatura", mensagem: 'Por favor, digite a temperatura do local.'},
+            { id: "ndvi", mensagem: 'Por favor, digite a NDVI.'},
+            {id: "producao", mensagem:'Marque o tamanho estimado da produção.'},
+            { id: "precoSaca", mensagem: 'Por favor, digite o valor da saca.'}
 
         ];
         let formValido = true;
