@@ -159,7 +159,7 @@ O projeto utiliza uma identidade visual inspirada no agronegócio, sustentabilid
 
 # 🖼️ Screenshots
 
-> Adicione prints reais das telas após finalizar o projeto visualmente. Sugestão de capturas:
+> Algém coloca prints reais da tela fazendo favor
 
 | Página | O que mostrar |
 |---|---|
