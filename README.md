@@ -135,7 +135,7 @@ O projeto utiliza uma identidade visual inspirada no agronegócio, sustentabilid
 ┃ ┃ ┃ ┣ 📄 Tarik.jpeg
 ┃ ┃ ┃ ┣ 📄 Giovanni.jpeg
 ┃ ┃ ┃ ┣ 📄 Italo.jpeg
-┃ ┃ ┃ ┣ 📄 fabricio.png
+┃ ┃ ┃ ┣ 📄 fabricio.jpeg
 ┃ ┃ ┃ ┗ 📄 Carlos.jpeg
 ┃ ┃ ┃
 ┃ ┃ ┗ 📂 icones
