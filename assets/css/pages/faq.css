@@ -71,6 +71,13 @@
     opacity: 1;
     padding: 16px;
 }
+
+.faq-ndvi-list {
+    margin-top: 10px;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
 /* Título da seção */
 #faq-titulo {
     border-left: 5px solid var(--green);
