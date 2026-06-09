@@ -77,3 +77,18 @@
     padding-left: 0.8rem;
     margin-bottom: 0.5rem;
 }
+@media (max-width: 480px) {
+    .accordion-header {
+        padding: 0.9rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .accordion-content {
+        padding: 0 12px;
+        font-size: 0.9rem;
+    }
+
+    .accordion-item.open .accordion-content {
+        padding: 12px;
+    }
+}
